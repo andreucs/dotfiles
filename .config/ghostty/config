@@ -1,0 +1,17 @@
+# Ghostty
+
+# Font
+font-family = MesloLGS NF
+font-size = 14
+
+# Theme
+# Ghostty Default Style Dark
+# theme = Catppuccin Macchiato
+
+# Window 
+background-opacity = 0.95
+background-blur = true
+maximize = true
+window-padding-balance = true
+window-padding-color = extend
+window-step-resize = false
