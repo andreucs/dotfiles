@@ -1,0 +1,51 @@
+format = """
+$username\
+$directory\
+$git_branch\
+$git_status\
+$python\
+$lua\
+$rust\
+$line_break\
+$character"""
+
+[character]
+success_symbol = '[>>>](bold green)'
+error_symbol = '[>>>](bold green)'
+disabled = false
+
+[username]
+show_always = true
+disabled = false
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+format = '[$path]($style) '
+disabled = false
+truncation_symbol = ''
+
+[git_branch]
+format = 'on [$symbol$branch]($style) '
+symbol = 'git '
+truncation_symbol = ''
+disabled = false
+
+[git_status]
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
+disabled = false
+
+[python]
+format = 'via [$symbol]($style)'
+symbol = ' '
+pyenv_version_name = false
+disabled = false
+
+[rust]
+format = 'via [$symbol]($style)'
+# symbol = ' '
+disabled = false
