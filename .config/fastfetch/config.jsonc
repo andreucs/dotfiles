@@ -1,0 +1,33 @@
+{
+  "logo": {
+    "type": "builtin",
+    "source": "Linux",
+    "padding": {
+      "top": 2,
+      "right": 2,
+      "left": 2
+    }
+  },
+  "modules": [
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "display",
+    "de",
+    "wm",
+    "theme",
+    "icons",
+    "terminal",
+    "terminalfont",
+    "cpu",
+    "gpu",
+    "memory",
+    "swap",
+    "disk",
+    "break",
+    "colors"
+  ]
+}
