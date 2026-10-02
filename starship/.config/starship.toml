@@ -1,4 +1,6 @@
 format = """
+$character\
+$hostname\
 $username\
 $directory\
 $git_branch\
@@ -6,28 +8,43 @@ $git_status\
 $python\
 $lua\
 $rust\
-$line_break\
-$character"""
+$line_break"""
+
+# Get editor completion based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Don't insert a blank line between shell prompts
+add_newline = false
 
 [character]
-success_symbol = '>>>'
-error_symbol = '>>>'
+success_symbol = '->'
+error_symbol = '[->](bold red)'
+disabled = false
+
+[line_break]
+disabled = true
+
+[hostname]
+ssh_only = true
+ssh_symbol = ''
+format = '[$ssh_symbol$hostname]($style)@'
 disabled = false
 
 [username]
+format = '[$user]($style) '
 show_always = true
-disabled = false
+disabled = true
 
 [directory]
-truncation_length = 3
+truncation_length = 4
 truncate_to_repo = true
 format = '[$path]($style) '
 disabled = false
 truncation_symbol = ''
 
 [git_branch]
-format = 'on [$symbol$branch]($style) '
-symbol = 'git '
+format = '[git\($symbol$branch\)]($style) '
+symbol = ''
 truncation_symbol = ''
 disabled = false
 
@@ -41,16 +58,13 @@ disabled = false
 
 [python]
 format = 'via [$symbol]($style)'
-symbol = ' '
 pyenv_version_name = false
 disabled = false
 
 [rust]
 format = 'via [$symbol]($style)'
-# symbol = ' '
 disabled = false
 
 [lua]
 format = 'via [$symbol]($style)'
-symbol = ' '
 disabled = false
