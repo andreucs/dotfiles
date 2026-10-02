@@ -1,12 +1,12 @@
 {
   "logo": {
-    "type": "builtin",
-    "source": "Linux",
-    "padding": {
-      "top": 2,
-      "right": 2,
-      "left": 2
-    }
+    "type": "builtin"
+    // "source": "Linux",
+    // "padding": {
+    //  "top": 2,
+    //  "right": 2,
+    //  "left": 2
+    // }
   },
   "modules": [
     "os",
